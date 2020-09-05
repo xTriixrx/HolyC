@@ -1,0 +1,15 @@
+When the HolyC files are ready for extraction to the host machine, perform the following:
+
+1. Convert VMDK to ISO image.
+	a. Run rebuild_third_temple to convert VMDK to ISO image
+
+2. Once the ISO image is created, mount the ISO image.
+	a. On Mac OS can use Disk Utility
+		i. Or use hdiutil mount /location/to/file.iso
+
+3. Navigate through ISO image and extract HolyC files onto host machine.
+
+4. Unmount ISO image.
+
+5. Decompress each HC.Z file using the TOSZ binary.
+	a. ./TOSZ Hello.HC.Z

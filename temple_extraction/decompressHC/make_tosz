@@ -1,0 +1,8 @@
+#!/bin/bash
+
+#Make TOSZ
+
+echo Building TOSZ...
+gcc TOSZ.CPP -o TOSZ
+chmod 777 TOSZ
+echo Finished building TOSZ

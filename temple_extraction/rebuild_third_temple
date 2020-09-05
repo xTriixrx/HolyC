@@ -1,0 +1,20 @@
+#!/bin/sh
+
+RAW_NME="thirdTemple.raw"
+ISO_NME="thirdTemple.iso"
+VMDK_NME=Virtual\ Disk.vmdk
+VM_LOC=/Users/vincent/Virtual\ Machines.localized/Temple\ OS.vmwarevm
+VMDK_LOC="$VM_LOC/$VMDK_NME"
+
+echo Converting vmdk into raw image.
+qemu-img convert -f vmdk "$VMDK_LOC" "$RAW_NME"
+
+echo Converting raw image into .ISO.
+dd if="$RAW_NME" of="$ISO_NME"
+
+echo Removing raw image
+rm $RAW_NME
+
+echo "God's Third Temple has been Rebuilt."
+
+exit 0
